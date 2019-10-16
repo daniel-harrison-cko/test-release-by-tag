@@ -13,8 +13,6 @@ Task("Build")
     };
 
     DotNetCoreBuild("TestReleaseByTag.sln", buildSettings);
-
-    Information($"##teamcity[buildNumber '{version.FullSemVer}']");
 });
 
 Task("Deploy")
